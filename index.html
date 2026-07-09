@@ -9,89 +9,99 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #0d0d0d;
+    background: #0a0a0a;
     color: #fff;
-    text-align: center;
 }
 
+/* CONTAINER */
 .container {
     max-width: 500px;
     margin: auto;
-    padding: 20px;
+    padding: 15px;
 }
 
-img {
+/* IMAGEM */
+.topo img {
     width: 100%;
     border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,255,120,0.3);
 }
 
+/* TITULO */
 .titulo {
     font-size: 28px;
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .subtitulo {
     color: #00ff88;
-    font-weight: bold;
-    margin: 10px 0;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
-.info-box {
-    background: #1a1a1a;
-    padding: 15px;
+/* FAIXA */
+.oferta {
+    background: linear-gradient(45deg, purple, #00ff88);
+    padding: 12px;
+    text-align: center;
     border-radius: 10px;
-    margin-top: 15px;
-    text-align: left;
-}
-
-.info-box p {
-    margin: 8px 0;
-}
-
-.preco {
-    font-size: 26px;
-    color: gold;
     font-weight: bold;
-    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
+/* BOTÃO */
 .botao {
     display: block;
-    background: #00c853;
-    color: #fff;
+    background: #00ff88;
+    color: black;
+    text-align: center;
     padding: 15px;
     border-radius: 10px;
-    text-decoration: none;
     font-weight: bold;
-    margin-top: 20px;
+    text-decoration: none;
+    margin-top: 15px;
 }
 
-.botao:hover {
-    background: #00a844;
+/* CARDS */
+.card {
+    background: #151515;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-.detalhes {
+.card h3 {
+    margin: 0 0 8px 0;
+    color: #00ff88;
+}
+
+/* ESCONDER */
+.hidden {
     display: none;
-    margin-top: 20px;
-    text-align: left;
 }
 
-/* NOVO: animação suave */
-.mostrar {
-    display: block;
+/* BOTÃO FIXO */
+.botao-fixo {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #25D366;
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
 }
 </style>
 
 <script>
 function mostrarDetalhes() {
-    var detalhes = document.getElementById("detalhes");
-
-    if (detalhes.style.display === "block") {
-        detalhes.style.display = "none";
-    } else {
-        detalhes.style.display = "block";
-    }
+    document.getElementById("conteudo").classList.toggle("hidden");
 }
 </script>
 
@@ -101,72 +111,73 @@ function mostrarDetalhes() {
 
 <div class="container">
 
-    <!-- IMAGEM -->
-    <img src="1783571361006.jpeg">
-
-    <!-- TITULO -->
-    <div class="titulo">AUTO CLICKER</div>
-    <div class="subtitulo">Modo Live + Modo Carreira</div>
-
-    <!-- RESUMO -->
-    <div class="info-box">
-        <p>🔥 Ganha até 95% das partidas</p>
-        <p>💰 Moedas: 3K - 5K</p>
-        <p>💎 Diamantes: 100 - 200</p>
-        <p>🎯 DP: 5K - 8K</p>
-        <p>⚡ Funciona em segundo plano</p>
-        <p>📱 Compatível com todos aparelhos</p>
+    <div class="topo">
+        <img src="1783571361006.jpeg">
     </div>
 
-    <!-- PREÇO -->
-    <div class="preco">R$ 50,00</div>
+    <div class="titulo">AUTO CLICKER</div>
+    <div class="subtitulo">MODO CARREIRA</div>
+
+    <div class="oferta">
+        🔒 PRODUTO EXCLUSIVO
+    </div>
 
     <!-- BOTÃO -->
     <a href="javascript:void(0)" class="botao" onclick="mostrarDetalhes()">
-        CLIQUE AQUI PARA SABER MAIS
+        🔍 VER MAIS DETALHES
     </a>
 
-    <!-- DETALHES COMPLETOS -->
-    <div id="detalhes" class="detalhes">
-        <div class="info-box">
+    <!-- CONTEÚDO ESCONDIDO -->
+    <div id="conteudo" class="hidden">
 
-            <p><strong>Nome do produto:</strong><br>
-            ALTO CLICK DO RAMOS💯</p>
-
-            <p><strong>Descrição:</strong><br>
-            ESTÁ QUERENDO FACILITAR SUA VIDA NO DLS NÉ?😏<br>
-            AQUI NÓS TEMOS O QUE VOCÊ PRECISA!🤩👇<br><br>
-            ALTO CLICK 100% AUTOMÁTICO
-            </p>
-
-            <p><strong>RECURSOS DIÁRIOS:</strong><br>
-            • 3-5 MIL MOEDAS<br>
-            • 100-200 DIAMANTES<br>
-            • 5-8 MIL DE DP
-            </p>
-
-            <p><strong>NO MENU INICIAL DO JOGO:</strong><br>
-            Logo após entrar no jogo, já pode iniciar que ele entra na partida automaticamente fazendo todo o processo por você
-            </p>
-
-            <p><strong>DURANTE O JOGO:</strong><br>
-            • Faz gol<br>
-            • Bate pênalti<br>
-            • Bate falta<br>
-            • Bate escanteio
-            </p>
-
-            <p><strong>BENEFÍCIOS DE USO:</strong><br>
-            • Usa com a tela desligada<br>
-            • Pode mexer em outros apps enquanto farma<br>
-            • Pode dormir que ele farma<br>
-            • Não precisa fazer esforço
-            </p>
-
+        <div class="card">
+            <h3>🔥 Desempenho</h3>
+            <p>Ganha até 95% das partidas automaticamente.</p>
         </div>
+
+        <div class="card">
+            <h3>💰 Moedas</h3>
+            <p>3K a 5K moedas por dia.</p>
+        </div>
+
+        <div class="card">
+            <h3>💎 Diamantes</h3>
+            <p>100 a 200 diamantes diariamente.</p>
+        </div>
+
+        <div class="card">
+            <h3>🎯 Pontos DP</h3>
+            <p>5K a 8K todos os dias.</p>
+        </div>
+
+        <div class="card">
+            <h3>⚡ Automático</h3>
+            <p>Funciona sozinho até com a tela desligada.</p>
+        </div>
+
+        <div class="card">
+            <h3>📱 Compatibilidade</h3>
+            <p>Funciona em praticamente qualquer celular.</p>
+        </div>
+
+        <div class="card">
+            <h3>⚙️ Dentro do Jogo</h3>
+            <p>Faz gols, pênaltis, faltas e escanteios automaticamente.</p>
+        </div>
+
+        <div class="card">
+            <h3>🚀 Benefícios</h3>
+            <p>Farm automático, zero esforço, pode usar outros apps.</p>
+        </div>
+
     </div>
 
 </div>
+
+<!-- BOTÃO FIXO -->
+<a href="https://wa.me/SEUNUMEROAQUI" class="botao-fixo">
+    💬 COMPRAR PELO WHATSAPP
+</a>
 
 </body>
 </html>
