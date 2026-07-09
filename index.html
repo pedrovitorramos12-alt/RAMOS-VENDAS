@@ -73,4 +73,58 @@ img {
 
 .detalhes {
     display: none;
-    margin-top: 20
+    margin-top: 20px;
+    text-align: left;
+}
+</style>
+
+<script>
+function mostrarDetalhes() {
+    document.getElementById("detalhes").style.display = "block";
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- IMAGEM CORRIGIDA -->
+    <img src="1783571361006.jpeg">
+
+    <!-- TITULO -->
+    <div class="titulo">AUTO CLICKER</div>
+    <div class="subtitulo">Modo Live + Modo Carreira</div>
+
+    <!-- RESUMO -->
+    <div class="info-box">
+        <p>🔥 Ganha até 95% das partidas</p>
+        <p>💰 Moedas: 3K - 5K</p>
+        <p>💎 Diamantes: 100 - 200</p>
+        <p>🎯 DP: 5K - 8K</p>
+        <p>⚡ Funciona em segundo plano</p>
+        <p>📱 Compatível com todos aparelhos</p>
+    </div>
+
+    <!-- PREÇO -->
+    <div class="preco">R$ 50,00</div>
+
+    <!-- BOTÃO -->
+    <a href="#detalhes" class="botao" onclick="mostrarDetalhes()">CLIQUE AQUI PARA SABER MAIS</a>
+
+    <!-- DETALHES -->
+    <div id="detalhes" class="detalhes">
+        <div class="info-box">
+            <p>✔ Sistema 100% automático</p>
+            <p>✔ Funciona mesmo com a tela desligada</p>
+            <p>✔ Ideal para farmar moedas e diamantes</p>
+            <p>✔ Seguro e fácil de usar</p>
+            <p>✔ Ativação rápida após compra</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
