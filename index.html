@@ -76,11 +76,22 @@ img {
     margin-top: 20px;
     text-align: left;
 }
+
+/* NOVO: animação suave */
+.mostrar {
+    display: block;
+}
 </style>
 
 <script>
 function mostrarDetalhes() {
-    document.getElementById("detalhes").style.display = "block";
+    var detalhes = document.getElementById("detalhes");
+
+    if (detalhes.style.display === "block") {
+        detalhes.style.display = "none";
+    } else {
+        detalhes.style.display = "block";
+    }
 }
 </script>
 
@@ -90,7 +101,7 @@ function mostrarDetalhes() {
 
 <div class="container">
 
-    <!-- IMAGEM CORRIGIDA -->
+    <!-- IMAGEM -->
     <img src="1783571361006.jpeg">
 
     <!-- TITULO -->
@@ -111,16 +122,47 @@ function mostrarDetalhes() {
     <div class="preco">R$ 50,00</div>
 
     <!-- BOTÃO -->
-    <a href="javascript:void(0)" class="botao" onclick="mostrarDetalhes()">CLIQUE AQUI PARA SABER MAIS</a>
+    <a href="javascript:void(0)" class="botao" onclick="mostrarDetalhes()">
+        CLIQUE AQUI PARA SABER MAIS
+    </a>
 
-    <!-- DETALHES -->
+    <!-- DETALHES COMPLETOS -->
     <div id="detalhes" class="detalhes">
         <div class="info-box">
-            <p>✔ Sistema 100% automático</p>
-            <p>✔ Funciona mesmo com a tela desligada</p>
-            <p>✔ Ideal para farmar moedas e diamantes</p>
-            <p>✔ Seguro e fácil de usar</p>
-            <p>✔ Ativação rápida após compra</p>
+
+            <p><strong>Nome do produto:</strong><br>
+            ALTO CLICK DO RAMOS💯</p>
+
+            <p><strong>Descrição:</strong><br>
+            ESTÁ QUERENDO FACILITAR SUA VIDA NO DLS NÉ?😏<br>
+            AQUI NÓS TEMOS O QUE VOCÊ PRECISA!🤩👇<br><br>
+            ALTO CLICK 100% AUTOMÁTICO
+            </p>
+
+            <p><strong>RECURSOS DIÁRIOS:</strong><br>
+            • 3-5 MIL MOEDAS<br>
+            • 100-200 DIAMANTES<br>
+            • 5-8 MIL DE DP
+            </p>
+
+            <p><strong>NO MENU INICIAL DO JOGO:</strong><br>
+            Logo após entrar no jogo, já pode iniciar que ele entra na partida automaticamente fazendo todo o processo por você
+            </p>
+
+            <p><strong>DURANTE O JOGO:</strong><br>
+            • Faz gol<br>
+            • Bate pênalti<br>
+            • Bate falta<br>
+            • Bate escanteio
+            </p>
+
+            <p><strong>BENEFÍCIOS DE USO:</strong><br>
+            • Usa com a tela desligada<br>
+            • Pode mexer em outros apps enquanto farma<br>
+            • Pode dormir que ele farma<br>
+            • Não precisa fazer esforço
+            </p>
+
         </div>
     </div>
 
